@@ -1,0 +1,24 @@
+﻿<ContentDialog
+    x:Class="MiUnoApp.Modals.CreateAccount"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MiUnoApp.Modals"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Create user"
+    PrimaryButtonText="Create user"
+    SecondaryButtonText="Cancel"
+    PrimaryButtonClick="ContentDialog_PrimaryButtonClick"
+    SecondaryButtonClick="ContentDialog_SecondaryButtonClick">
+
+	<Grid>
+        <StackPanel>
+            <TextBox x:Name="emailTxt" PlaceholderText="Email"/>
+            <TextBox x:Name="userNameTxt" PlaceholderText="User name" Margin="0,5,0,0"/>
+            <PasswordBox x:Name="passwordTxt" PlaceholderText="Password" Margin="0,5,0,0"/>
+            <PasswordBox x:Name="passwordConfirmTxt" PlaceholderText="Confirm password" Margin="0,5,0,0"/>
+            <TextBox x:Name="firstNamesTxt" PlaceholderText="First names" Margin="0,5,0,0"/>
+            <TextBox x:Name="lastNamesTxt" PlaceholderText="Last names" Margin="0,5,0,0"/>
+            <TextBox x:Name="phoneTxt" PlaceholderText="Phone number" Margin="0,5,0,0"/>
+        </StackPanel>
+    </Grid>
+</ContentDialog>

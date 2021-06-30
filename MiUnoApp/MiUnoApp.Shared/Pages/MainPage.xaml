@@ -1,0 +1,35 @@
+﻿<Page
+    x:Class="MiUnoApp.Pages.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MiUnoApp.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Background="CornflowerBlue" Orientation="Horizontal" Height="auto">
+            <Image Source="/Assets/exit.png" Height="80" HorizontalAlignment="Left" Margin="20,5,0,5" Tapped="OnExitImageTapped"/>
+            <TextBlock x:Name="messageLbl" Text="Welcome dear" VerticalAlignment="Center" Margin="10,0,0,0" FontSize="40" Foreground="LightYellow"/>
+        </StackPanel>
+        <Frame Grid.Row="1" x:Name="LocalFrame"/>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel x:Name="dogPnl" Grid.Column="0" BorderThickness="2" BorderBrush="Black" Background="LightGray" Tapped="StackPanel_Tapped">
+                <Image Source="/Assets/dog.png" Height="130"/>
+            </StackPanel>
+            <StackPanel x:Name="userPnl" Grid.Column="1" BorderThickness="2" BorderBrush="Black" Background="White" Tapped="StackPane2_Tapped">
+                <Image Source="/Assets/user.png" Height="130"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>

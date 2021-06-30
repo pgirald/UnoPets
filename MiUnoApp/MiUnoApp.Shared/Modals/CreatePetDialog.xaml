@@ -1,0 +1,20 @@
+﻿<ContentDialog
+    x:Class="MiUnoApp.Modals.CreatePetDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MiUnoApp.Modals"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Add pet"
+    PrimaryButtonText="Add"
+    SecondaryButtonText="Cancel"
+    PrimaryButtonClick="ContentDialog_PrimaryButtonClick"
+    SecondaryButtonClick="ContentDialog_SecondaryButtonClick"
+    Opened="OnDialogOpened">
+
+    <Grid>
+        <StackPanel>
+            <TextBox x:Name="nameTxt" PlaceholderText="Name"/>
+            <ComboBox x:Name="specieCbx" ItemsSource="{x:Bind Species}" PlaceholderText="Specie" Width="200" Margin="0,10,0,0"/>
+        </StackPanel>
+    </Grid>
+</ContentDialog>
